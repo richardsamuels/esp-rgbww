@@ -1,0 +1,18 @@
+<<: !include core.yaml
+
+substitutions:
+  name: "name"
+  light_name: "light_name"
+
+light:
+  - platform: rgbww
+    name: "${light_name}"
+    red: output_r
+    green: output_g
+    blue: output_b
+    warm_white: output_ww
+    cold_white: output_cw
+    cold_white_color_temperature: 6500 K
+    warm_white_color_temperature: 2300 K
+    color_interlock: true
+    restore_mode: RESTORE_DEFAULT_OFF

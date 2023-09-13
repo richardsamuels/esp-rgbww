@@ -1,0 +1,20 @@
+<<: !include core.yaml
+substitutions:
+  name: "name"
+  channel1_name: "Channel 1"
+  channel2_name: "Channel 2"
+  channel1_disable: "false"
+  channel2_disable: "false"
+
+
+light:
+  - platform: monochromatic
+    name: "Channel 1"
+    output: output_r
+    internal: "${channel1_disable}"
+    restore_mode: RESTORE_DEFAULT_OFF
+  - platform: monochromatic
+    name: "Channel 2"
+    output: output_g
+    internal: "${channel2_disable}"
+    restore_mode: RESTORE_DEFAULT_OFF
