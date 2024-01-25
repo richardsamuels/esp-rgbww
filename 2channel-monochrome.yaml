@@ -6,7 +6,6 @@ substitutions:
   channel1_disable: "false"
   channel2_disable: "false"
 
-
 light:
   - platform: monochromatic
     name: "Channel 1"
