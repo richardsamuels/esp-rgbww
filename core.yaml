@@ -31,7 +31,6 @@ logger:
 
 <<: !include secrets.yaml
 
-
 esp32_ble_tracker:
   scan_parameters:
     active: true
@@ -72,3 +71,6 @@ output:
     min_power: 1%
     zero_means_zero: true
 
+sensor:
+  - platform: internal_temperature
+    name: "ESP32 Die Temp"
